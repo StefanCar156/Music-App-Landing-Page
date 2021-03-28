@@ -1,0 +1,19 @@
+// Colors
+$primary-purple: #7971e9;
+$primary-white: #f9f8ff;
+$light-gray: #293942;
+$dark-gray: #1b262c;
+
+// Font Weights
+$font-weights: (
+  "thin": 300,
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700,
+  "black-900": 900,
+);
+
+@function weight($weight-key) {
+  @return map-get($font-weights, $weight-key);
+}
