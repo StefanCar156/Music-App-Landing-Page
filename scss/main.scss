@@ -2,6 +2,9 @@
 @import "./variables";
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 120px;
   background-color: $light-gray;
@@ -15,6 +18,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__logo {
+    img {
+      width: 100%;
+    }
+  }
 
   &__links {
     display: flex;
@@ -56,10 +65,19 @@ header {
       color: $primary-white;
     }
   }
+  &__btn {
+    display: none;
+
+    img {
+      width: 100%;
+      pointer-events: none;
+    }
+  }
 }
 
 .hero {
-  padding: 20vh 10vw;
+  margin-top: 120px;
+  padding: 20vh 10vw 20vh;
   background: url(../img/hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -86,6 +104,10 @@ header {
 
     &__btn {
       margin-right: 19px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -119,7 +141,7 @@ header {
   }
   &__cover {
     border-radius: 8px;
-    height: 200px;
+    height: fit-content;
 
     img {
       width: 100%;
@@ -216,11 +238,11 @@ header {
       }
       &__range__container {
         position: relative;
-        height: 6px;
+        height: 5px;
       }
       &__range {
         width: 100%;
-        height: 4px;
+        height: 5px;
         color: $primary-purple;
         position: absolute;
 
@@ -230,7 +252,7 @@ header {
       }
       &__range__fill {
         position: absolute;
-        top: -1px;
+        top: -0.5px;
         left: 0;
         width: 50%;
         height: 6px;
@@ -317,6 +339,7 @@ header {
   &__info {
     margin-right: 10vw;
   }
+
   &__paragraph {
     max-width: 472px;
     margin-top: 45px;
@@ -327,6 +350,7 @@ header {
     flex: 1;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   &__heading {
     font-weight: weight(medium);
@@ -337,6 +361,7 @@ header {
     text-transform: capitalize;
   }
   &__list {
+    margin: 0 10px;
     li {
       margin-bottom: 20px;
     }
@@ -354,9 +379,19 @@ header {
   &__social {
     margin: 0 auto;
     width: 15vw;
+    min-width: 300px;
     display: flex;
     align-items: center;
     height: 100%;
     justify-content: space-between;
+
+    &__link {
+      img {
+        width: 100%;
+      }
+    }
   }
 }
+
+// Responsiveness
+@import "./responsive";

@@ -1,0 +1,561 @@
+@media screen and (max-width: 1200px) {
+  .nav {
+    &__logo {
+      width: 180px;
+    }
+    &__links {
+      li {
+        margin: 0 20px;
+      }
+    }
+    &__link {
+      font-weight: weight(bold);
+    }
+  }
+  .hero {
+    &__title {
+      max-width: 50vw;
+      font-size: 34px;
+      line-height: 40px;
+    }
+    &__btn {
+      padding: 10px 44px;
+    }
+    &__cta {
+      &__btn {
+        width: 120px;
+      }
+    }
+  }
+  .brand {
+    &__list {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__item {
+      margin: 0 20px;
+    }
+  }
+  .music {
+    &__covers {
+      grid-template-columns: repeat(auto-fit, 180px);
+      grid-gap: 15px;
+    }
+    &__title {
+      font-size: 34px;
+      line-height: 40px;
+    }
+    &__paragraph {
+      font-size: 18px;
+      font-weight: weight(regular);
+    }
+    &__cta {
+      font-size: 16px;
+      font-weight: weight(bold);
+    }
+  }
+  .popular {
+    &__text {
+      max-width: 35vw;
+      margin-right: 50px;
+    }
+    &__articles {
+      .article {
+        &:first-of-type {
+          margin-right: 20px;
+        }
+        &__img {
+          width: 220px;
+        }
+        &__btn {
+          width: 16px;
+
+          img {
+            width: 100%;
+          }
+          &:nth-of-type(2) {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+  .about {
+    &__title {
+      font-size: 34px;
+      line-height: 40px;
+    }
+    &__articles {
+      .article {
+        &::before {
+          height: 34px;
+        }
+        &__title {
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  .footer {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info {
+      margin: 0 0 50px;
+      text-align: center;
+    }
+    &__links {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  header {
+    height: 80px;
+  }
+  .header--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  .nav {
+    &__logo {
+      width: 140px;
+    }
+    &__links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $light-gray;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      transform: translateX(100%);
+      transition: all 0.2s ease-in;
+
+      &--active {
+        visibility: visible;
+        transform: translateX(0);
+      }
+
+      li {
+        margin: 30px 0;
+
+        &:last-of-type {
+          margin-top: 30px;
+        }
+      }
+    }
+    &__link {
+      font-size: 20px;
+    }
+    &__btn {
+      width: 28pxx;
+      display: flex;
+      z-index: 2;
+    }
+  }
+  .hero {
+    margin-top: 80px;
+    background-position: 50% 0;
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 30px;
+    }
+    &__btn {
+      padding: 8px 40px;
+    }
+    &__cta {
+      &__btn {
+        width: 100px;
+      }
+    }
+  }
+  .brand {
+    height: fit-content;
+    padding: 20px 0;
+    &__item {
+      margin: 10px 20px;
+      img {
+        height: 20px;
+      }
+    }
+  }
+  .music {
+    flex-direction: column;
+    align-items: center;
+
+    &__covers {
+      max-width: none;
+      width: 100%;
+      grid-template-columns: repeat(3, 160px);
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+      width: 80%;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+  .popular {
+    flex-direction: column;
+    align-items: center;
+
+    &__text {
+      margin: 0;
+      max-width: none;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__articles {
+      margin-bottom: 40px;
+      width: 80%;
+      justify-content: space-between;
+    }
+  }
+  .about {
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    &__articles {
+      .article {
+        &__title {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .footer {
+    &__top {
+      padding: 70px 10vw;
+    }
+    &__logo {
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    align-items: center;
+    text-align: center;
+    background-position: 30% 0;
+
+    &__title {
+      font-size: 26px;
+      line-height: 32px;
+      max-width: 80%;
+    }
+    &__btn {
+      margin-bottom: 40px;
+    }
+  }
+  .brand {
+    padding: 15px 0;
+    &__item {
+      margin: 10px 20px;
+
+      img {
+        height: 15px;
+      }
+    }
+  }
+  .music {
+    &__covers {
+      grid-template-columns: repeat(2, 160px);
+      grid-gap: 10px;
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    &__paragraph {
+      font-size: 16px;
+    }
+  }
+  .popular {
+    &__articles {
+      flex-direction: column;
+      align-items: center;
+
+      .article {
+        &:first-of-type {
+          margin: 0 0 30px;
+        }
+      }
+    }
+    &__title {
+      text-align: center;
+    }
+    &__paragraph {
+      text-align: center;
+    }
+  }
+  .about {
+    padding: 50px 10vw;
+    align-items: center;
+
+    &__title {
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    &__articles {
+      flex-direction: column;
+      width: 100%;
+
+      .article {
+        max-width: none;
+        width: 100%;
+        margin-bottom: 40px;
+
+        &::before {
+          height: 26px;
+        }
+
+        &__title {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+        &__paragraph {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .footer {
+    &__top {
+      padding: 50px 10vw;
+    }
+    &__logo {
+      img {
+        width: 160px;
+      }
+    }
+    &__paragraph {
+      margin-top: 25px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__heading {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    &__list {
+      margin: 0 20px 20px;
+      li {
+        margin-bottom: 15px;
+      }
+    }
+    &__link {
+      font-size: 14px;
+    }
+  }
+  &__social {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  header {
+    height: 60px;
+  }
+  .nav {
+    &__logo {
+      width: 100px;
+    }
+    &__btn {
+      width: 24px;
+    }
+    &__links {
+      li {
+        margin: 15px 0;
+      }
+    }
+    &__link {
+      font-size: 18px;
+    }
+  }
+  .hero {
+    margin-top: 60px;
+    padding: 15vh 10vw;
+
+    &__title {
+      font-size: 22px;
+      line-height: 28px;
+      max-width: 100%;
+    }
+    &__btn {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__cta {
+      width: 80%;
+      justify-content: space-between;
+      &__btn {
+        &:first-of-type {
+          margin-right: 0;
+        }
+        width: 80px;
+      }
+    }
+  }
+  .brand {
+    &__item {
+      margin: 10px 15px;
+    }
+  }
+  .music {
+    padding: 50px 10vw;
+    &__covers {
+      grid-template-columns: repeat(2, 100px);
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+    &__paragraph {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__cta {
+      font-size: 14px;
+      font-weight: weight(semi-bold);
+
+      img {
+        height: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .popular {
+    padding: 50px 10vw;
+
+    &__articles {
+      .article {
+        &__img {
+          width: 200px;
+        }
+        &__main {
+          padding: 20px 15px 10px;
+        }
+        &__song__artist {
+          font-size: 12px;
+          font-weight: weight(semi-bold);
+        }
+        &__song__name {
+          font-size: 10px;
+          font-weight: weight(semi-bold);
+        }
+        &__time {
+          p {
+            font-size: 12px;
+          }
+        }
+        &__btns {
+          width: 60%;
+        }
+        &__btn {
+          width: 12px;
+
+          img {
+            width: 100%;
+          }
+          &:nth-of-type(2) {
+            width: 32px;
+          }
+        }
+      }
+    }
+  }
+  .about {
+    padding: 30px 10vw 0;
+    &__title {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+    &__articles {
+      .article {
+        &::before {
+          height: 22px;
+          width: 3px;
+          left: -10px;
+        }
+        &__title {
+          font-size: 16px;
+          line-height: 22px;
+          font-weight: weight(semi-bold);
+          margin-bottom: 10px;
+        }
+        &__paragraph {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  .footer {
+    &__top {
+      padding: 30px 10vw;
+    }
+    &__info {
+      margin-bottom: 40px;
+    }
+    &__logo {
+      img {
+        width: 140px;
+      }
+    }
+    &__paragraph {
+      margin-top: 15px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &__links {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__bottom {
+      height: 60px;
+    }
+    &__social {
+      min-width: 60%;
+
+      &__link {
+        img {
+          height: 24px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 320px) {
+  body {
+    display: none;
+  }
+}
